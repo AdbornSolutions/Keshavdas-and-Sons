@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import KNSLogo from "../assets/kns-logo.png";
+import KNSLogo from "../assets/kns-logo.webp";
 import { Menu, Search, X, ChevronDown } from "lucide-react";
 
 const navigation = [

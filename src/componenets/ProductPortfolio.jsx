@@ -1,8 +1,8 @@
 import { ArrowUpRight, Heart } from "lucide-react";
 import { useState } from "react";
-import Omega3 from "../assets/Omega3.png";
-import Cofsils from "../assets/cofsils-gargle.png";
-import Himalaya from "../assets/himalaya-wellness.png";
+import Omega3 from "../assets/Omega3.webp";
+import Cofsils from "../assets/cofsils-gargle.webp";
+import Himalaya from "../assets/himalaya-wellness.webp";
 
 const products = [
   {

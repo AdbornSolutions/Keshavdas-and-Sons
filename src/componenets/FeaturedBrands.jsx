@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
-import Cetaphil from "../assets/cetaphil.png";
-import CIR from "../assets/cir.png";
-import Dabur from "../assets/dabur.png";
-import Himalaya from "../assets/himalaya.png";
-import Moov from "../assets/moov.png";
-import MuscleBlaze from "../assets/muscleblaze.png";
-import Tejasya from "../assets/tejasya.png";
+import Cetaphil from "../assets/cetaphil.webp";
+import CIR from "../assets/cir.webp";
+import Dabur from "../assets/dabur.webp";
+import Himalaya from "../assets/himalaya.webp";
+import Moov from "../assets/moov.webp";
+import MuscleBlaze from "../assets/muscleblaze.webp";
+import Tejasya from "../assets/tejasya.webp";
 
 const brands = [
   {

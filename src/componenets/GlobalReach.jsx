@@ -1,4 +1,4 @@
-import WorldMap from "../assets/world-map.png";
+import WorldMap from "../assets/world-map.webp";
 
 export default function GlobalReach() {
   return (

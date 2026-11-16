@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import PharmaceuticalVials from "../assets/pharmaceutical-vials.png";
+import PharmaceuticalVials from "../assets/pharmaceutical-vials.webp";
 
 export default function ExportInquiryCTA() {
   const phoneNumber = "+918042755758";

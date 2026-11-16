@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import AboutLab from "../assets/about-lab.png";
+import AboutLab from "../assets/about-lab.webp";
 
 export default function AboutSection() {
   return (

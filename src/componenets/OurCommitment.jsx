@@ -1,6 +1,6 @@
-import Documentation from "../assets/documentation.png";
-import Packaging from "../assets/packaging.png";
-import Regulatory from "../assets/regulatory.png";
+import Documentation from "../assets/documentation.webp";
+import Packaging from "../assets/packaging.webp";
+import Regulatory from "../assets/regulatory.webp";
 
 const commitments = [
   {

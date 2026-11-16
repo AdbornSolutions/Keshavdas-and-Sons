@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import KNSLogo from "../assets/kns-logo.png";
+import KNSLogo from "../assets/kns-logo.webp";
 
 const footerLinks = [
   {

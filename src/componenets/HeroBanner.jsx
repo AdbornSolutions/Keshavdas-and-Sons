@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import FreeDelivery from "../assets/free-delivery.png";
-import SpecialOffers from "../assets/special-offers.png";
-import WhyChooseUs from "../assets/why-choose-us.png";
-import WorldwideDelivery from "../assets/worldwide-delivery.png";
+import FreeDelivery from "../assets/free-delivery.webp";
+import SpecialOffers from "../assets/special-offers.webp";
+import WhyChooseUs from "../assets/why-choose-us.webp";
+import WorldwideDelivery from "../assets/worldwide-delivery.webp";
 
 // Banner data
 const banners = [

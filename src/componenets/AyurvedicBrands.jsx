@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 
-import Baidyanath from "../assets/baidyanath.png";
-import Dabur from "../assets/daburtree.png";
-import Dhootapapeshwar from "../assets/dhootapapeshwar.png";
-import Himalaya from "../assets/himalaya1930.png";
+import Baidyanath from "../assets/baidyanath.webp";
+import Dabur from "../assets/daburtree.webp";
+import Dhootapapeshwar from "../assets/dhootapapeshwar.webp";
+import Himalaya from "../assets/himalaya1930.webp";
 
 const brands = [
   {

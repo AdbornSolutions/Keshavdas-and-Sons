@@ -1,12 +1,12 @@
-import DERMACARE from "../assets/dermacare.png";
-import DIABETES from "../assets/diabetes.png";
-import EYECARE from "../assets/eyecare.png";
-import HEARTCARE from "../assets/heartcare.png";
-import KIDNEYCARE from "../assets/kidneycare.png";
-import LIVERCARE from "../assets/livercare.png";
-import MUSCLECARE from "../assets/musclecare.png";
-import RESPIRATORYCARE from "../assets/respiratorycare.png";
-import STOMACHCARE from "../assets/stomach-care.png";
+import DERMACARE from "../assets/dermacare.webp";
+import DIABETES from "../assets/diabetes.webp";
+import EYECARE from "../assets/eyecare.webp";
+import HEARTCARE from "../assets/heartcare.webp";
+import KIDNEYCARE from "../assets/kidneycare.webp";
+import LIVERCARE from "../assets/livercare.webp";
+import MUSCLECARE from "../assets/musclecare.webp";
+import RESPIRATORYCARE from "../assets/respiratorycare.webp";
+import STOMACHCARE from "../assets/stomach-care.webp";
 
 import { useRef } from "react";
 

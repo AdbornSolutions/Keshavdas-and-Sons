@@ -1,8 +1,8 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import GlobalTrade from "../assets/global-trade.png";
-import Ophthalmic from "../assets/ophthalmic.jpg";
-import Pharmaceutical from "../assets/pharmaceutical.png";
+import GlobalTrade from "../assets/global-trade.webp";
+import Ophthalmic from "../assets/ophthalmic.webp";
+import Pharmaceutical from "../assets/pharmaceutical.webp";
 
 const insights = [
   {
