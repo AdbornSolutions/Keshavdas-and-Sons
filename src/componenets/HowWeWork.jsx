@@ -96,7 +96,7 @@ export default function HowWeWork() {
             A Structured Approach to
             <span
               className="
-                block text-[#FF8C2C]
+                block text-[#FF9436]
               "
             >
               Pharmaceutical Export
@@ -173,7 +173,7 @@ export default function HowWeWork() {
                     className="
                       mt-[27px]
                       block text-[45px]
-                      font-normal
+                      font-medium
                       leading-none
                       tracking-[-1.5px]
                       text-[#101010]

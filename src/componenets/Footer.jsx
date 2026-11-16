@@ -145,7 +145,7 @@ export default function Footer() {
                         leading-[1.4]
                         text-[#66798A]
                         transition-colors duration-200
-                        hover:text-[#FF8C2C]
+                        hover:text-[#FF9436]
                         sm:text-[15px]
                         xl:text-[16px]
                       "
@@ -185,7 +185,7 @@ export default function Footer() {
                         leading-[1.4]
                         text-[#66798A]
                         transition-colors
-                        hover:text-[#FF8C2C]
+                        hover:text-[#FF9436]
                         sm:text-[15px]
                         xl:text-[16px]
                       "
@@ -300,7 +300,7 @@ export default function Footer() {
                 text-[12px]
                 text-[#788998]
                 transition-colors
-                hover:text-[#FF8C2C]
+                hover:text-[#FF9436]
                 sm:text-[13px]
               "
             >
@@ -314,7 +314,7 @@ export default function Footer() {
                 text-[12px]
                 text-[#788998]
                 transition-colors
-                hover:text-[#FF8C2C]
+                hover:text-[#FF9436]
                 sm:text-[13px]
               "
             >

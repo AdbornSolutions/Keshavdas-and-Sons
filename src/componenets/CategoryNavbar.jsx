@@ -125,7 +125,7 @@ export default function CategoryNavbar({
                   focus-visible:outline-white
                   cursor-pointer
                   sm:text-[12.5px]
-                  lg:text-[13px]
+                  lg:text-[16px]
                 "
               >
                 <span>{category.name}</span>

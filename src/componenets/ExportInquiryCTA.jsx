@@ -61,7 +61,7 @@ export default function ExportInquiryCTA() {
             Let's Build Stronger
             <br className="hidden lg:block" /> Global Healthcare
             <br className="hidden lg:block" />{" "}
-            <span className="text-[#FF8C2C]">Connections.</span>
+            <span className="text-[#FF9436]">Connections.</span>
           </h2>
 
           {/* Description */}
@@ -118,7 +118,7 @@ export default function ExportInquiryCTA() {
                   flex h-[42px] w-[42px]
                   shrink-0 items-center
                   justify-center rounded-full
-                  bg-[#FF8C2C]
+                  bg-[#FF9436]
                   text-white
                   transition-transform duration-300
                   group-hover:rotate-45
@@ -155,7 +155,7 @@ export default function ExportInquiryCTA() {
                   shrink-0 items-center
                   justify-center rounded-full
                   bg-[#D9E3ED]
-                  text-[#FF8C2C]
+                  text-[#FF9436]
                   transition-transform duration-300
                   group-hover:translate-x-1
                 "
@@ -220,7 +220,7 @@ export default function ExportInquiryCTA() {
                   shrink-0 items-center
                   justify-center
                   rounded-[12px]
-                  bg-[#FF8C2C]
+                  bg-[#FF9436]
                   text-white
                 "
               >

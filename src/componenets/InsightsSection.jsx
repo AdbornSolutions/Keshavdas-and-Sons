@@ -110,7 +110,7 @@ function InsightCard({ insight, featured = false }) {
             to={insight.link}
             className="
               transition-colors duration-200
-              hover:text-[#FF8C2C]
+              hover:text-[#FF9436]
             "
           >
             {insight.title}
@@ -126,7 +126,7 @@ function InsightCard({ insight, featured = false }) {
             text-[13px] font-medium
             text-[#111111]
             transition-colors duration-200
-            hover:text-[#FF8C2C]
+            hover:text-[#FF9436]
             sm:text-[14px]
           "
         >
@@ -230,7 +230,7 @@ export default function InsightsSection() {
               text-[13px] font-medium
               text-[#111111]
               transition-all duration-300
-              hover:border-[#FF8C2C]
+              hover:border-[#FF9436]
               hover:bg-white
               sm:mt-[48px]
               xl:h-[56px]
@@ -243,7 +243,7 @@ export default function InsightsSection() {
                 flex h-[40px] w-[40px]
                 items-center justify-center
                 rounded-full
-                bg-[#FF8C2C]
+                bg-[#FF9436]
                 text-white
                 transition-transform duration-300
                 hover:rotate-[-30deg]

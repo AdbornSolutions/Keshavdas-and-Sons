@@ -1,53 +1,69 @@
-
-import { useState, useRef, useEffect } from "react";
-import { Plus, Minus, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Plus } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const faqData = [
   {
     id: 1,
-    question:
-      "What types of pharmaceutical products do you export?",
+    question: "What types of pharmaceutical products do you export?",
     answer:
       "Our catalogue spans anti-cancer medicines, steroid tablets and injectables, skin care, weight loss medicines, eye-care products and other pharmaceutical products.",
   },
   {
     id: 2,
-    question:
-      "Can pharmaceutical wholesalers submit bulk inquiries?",
+    question: "Can pharmaceutical wholesalers submit bulk inquiries?",
     answer:
       "Yes. Pharmaceutical wholesalers, distributors and institutions can submit bulk inquiries with their required products, quantities and destination country.",
   },
   {
     id: 3,
-    question:
-      "How can I request a product quotation?",
+    question: "How can I request a product quotation?",
     answer:
       "You can contact our team with your product requirements, quantities and destination. We will review your inquiry and discuss quotation details and availability.",
   },
   {
     id: 4,
-    question:
-      "What information is required for an export inquiry?",
+    question: "What information is required for an export inquiry?",
     answer:
       "Please share the medicine name, specifications, required quantity, destination country and any relevant documentation requirements.",
   },
   {
     id: 5,
-    question:
-      "How are product availability and documentation confirmed?",
+    question: "How are product availability and documentation confirmed?",
     answer:
       "Our team reviews product specifications, sourcing availability and applicable documentation before confirming supply details for your inquiry.",
   },
   {
     id: 6,
-    question:
-      "Do you support inquiries from different international markets?",
+    question: "Do you support inquiries from different international markets?",
     answer:
       "Yes. We support inquiries from international business customers, subject to product availability, applicable regulations and destination-country requirements.",
   },
 ];
 
+// Custom icon from your reference image
+function CornerIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 19V5H19"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+// Single FAQ accordion item
 function FAQItem({ faq, isOpen, onToggle }) {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
@@ -61,6 +77,8 @@ function FAQItem({ faq, isOpen, onToggle }) {
 
     updateHeight();
 
+    if (typeof ResizeObserver === "undefined") return;
+
     const observer = new ResizeObserver(updateHeight);
     observer.observe(contentRef.current);
 
@@ -72,9 +90,9 @@ function FAQItem({ faq, isOpen, onToggle }) {
       <h3>
         <button
           type="button"
+          id={`faq-question-${faq.id}`}
           aria-expanded={isOpen}
           aria-controls={`faq-answer-${faq.id}`}
-          id={`faq-question-${faq.id}`}
           onClick={onToggle}
           className="
             group flex w-full
@@ -84,7 +102,7 @@ function FAQItem({ faq, isOpen, onToggle }) {
             text-left
             focus-visible:outline-2
             focus-visible:outline-offset-[-2px]
-            focus-visible:outline-[#FF8C2C]
+            focus-visible:outline-[#FF9436]
             xl:min-h-[94px]
           "
         >
@@ -96,8 +114,6 @@ function FAQItem({ faq, isOpen, onToggle }) {
               leading-[1.35]
               tracking-[-0.3px]
               text-[#101010]
-              transition-colors
-              group-hover:text-[#FF8C2C]
               sm:text-[18px]
               lg:text-[20px]
               xl:text-[21px]
@@ -106,26 +122,43 @@ function FAQItem({ faq, isOpen, onToggle }) {
             {faq.question}
           </span>
 
-          {/* Plus / Minus icon */}
+          {/* Click-only FAQ icon */}
           <span
             className={`
-              flex h-[36px] w-[36px]
-              shrink-0 items-center
-              justify-center rounded-full
-              border transition-all duration-300
-              xl:h-[40px] xl:w-[40px]
+              relative flex h-[36px] w-[36px]
+              shrink-0 items-center justify-center
+              rounded-full border
+              transition-all duration-300 ease-in-out
+              xl:h-[48px] xl:w-[48px]
               ${
                 isOpen
-                  ? "border-[#FF8C2C] bg-[#FF8C2C] text-white"
-                  : "border-[#C4C9CD] bg-transparent text-[#111111] group-hover:border-[#FF8C2C]"
+                  ? "border-[#FF9436] bg-[#FF9436]"
+                  : "border-[#AEB3B7] bg-transparent"
               }
             `}
           >
-            {isOpen ? (
-              <Minus size={18} strokeWidth={1.8} />
-            ) : (
-              <Plus size={18} strokeWidth={1.8} />
-            )}
+            {/* Plus icon when closed */}
+            <Plus
+              size={20}
+              strokeWidth={2}
+              aria-hidden="true"
+              className={`
+                absolute text-[#111111]
+                transition-all duration-300 ease-in-out
+                ${isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100"}
+              `}
+            />
+
+            {/* White L-shaped icon when open */}
+            <span
+              className={`
+                absolute flex items-center justify-center
+                transition-all duration-300 ease-in-out
+                ${isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"}
+              `}
+            >
+              <CornerIcon />
+            </span>
           </span>
         </button>
       </h3>
@@ -165,20 +198,17 @@ function FAQItem({ faq, isOpen, onToggle }) {
   );
 }
 
+// Main FAQ section
 export default function FAQSection() {
-  const [activeFAQ, setActiveFAQ] = useState(1);
+  // All FAQ items start closed
+  const [activeFAQ, setActiveFAQ] = useState(null);
 
   const handleToggle = (id) => {
-    setActiveFAQ((previous) =>
-      previous === id ? null : id
-    );
+    setActiveFAQ((previous) => (previous === id ? null : id));
   };
 
   return (
-    <section
-      id="faqs"
-      className="w-full bg-[#F7FAFC]"
-    >
+    <section id="faqs" className="w-full bg-[#F7FAFC]">
       <div
         className="
           mx-auto grid w-full
@@ -241,8 +271,7 @@ export default function FAQSection() {
             "
           >
             Frequently Asked
-            <br className="hidden sm:block" />
-            {" "}Questions.
+            <br className="hidden sm:block" /> Questions.
           </h2>
 
           {/* Description */}
@@ -258,8 +287,8 @@ export default function FAQSection() {
               xl:text-[17px]
             "
           >
-            Answers for wholesalers, distributors and
-            institutions planning an export inquiry.
+            Answers for wholesalers, distributors and institutions planning an
+            export inquiry.
           </p>
 
           {/* Contact link */}
@@ -273,18 +302,16 @@ export default function FAQSection() {
               font-medium
               text-[#111111]
               transition-colors
-              hover:text-[#FF8C2C]
+              hover:text-[#FF9436]
               sm:text-[15px]
             "
           >
             Still have a question? Contact our team
-
             <ArrowUpRight
               size={18}
               strokeWidth={2}
               className="
-                transition-transform
-                duration-200
+                transition-transform duration-200
                 group-hover:translate-x-1
                 group-hover:-translate-y-1
               "

@@ -96,7 +96,7 @@ export default function FeaturedBrands() {
             >
               Featured Pharmaceutical
               <br />
-              <span className="text-[#FF8C2C]">Brands</span>
+              <span className="text-[#FF9436]">Brands</span>
             </h2>
 
             <p
@@ -124,11 +124,11 @@ export default function FeaturedBrands() {
               rounded-[9px]
               border border-[#C5CBD1]
               bg-transparent px-[13px]
-              text-[13px] font-semibold
+              text-[15px] font-semibold
               text-[#151515]
               transition-all duration-300
               hover:border-[#FF8C2C]
-              hover:bg-[#FF8C2C]
+              hover:bg-[#FF9436]
               hover:text-white
               xl:mt-[109px]
             "

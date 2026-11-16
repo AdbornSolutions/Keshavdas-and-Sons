@@ -77,7 +77,7 @@ export default function OurCommitment() {
             >
               Committed to Responsible
               <br className="hidden sm:block" />
-              <span className="text-[#FF8C2C]">Pharmaceutical Supply.</span>
+              <span className="text-[#FF9436]">Pharmaceutical Supply.</span>
             </h2>
           </div>
 

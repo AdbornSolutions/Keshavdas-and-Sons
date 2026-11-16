@@ -121,7 +121,7 @@ export default function HealthCategories() {
                     whitespace-nowrap text-center
                     text-[10px] font-medium
                     leading-none
-                    text-[#17365A]
+                    text-[#123B66]
                   "
                 >
                   {category.name}

@@ -70,7 +70,7 @@ function ServiceCard({ service }) {
         grid w-full grid-cols-1
         gap-6
         rounded-[20px]
-        bg-[#EAF7FB]
+        bg-[#EAF6FA]
         p-6
         sm:p-8
         lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_minmax(0,1fr)]
@@ -227,7 +227,7 @@ function ServiceCard({ service }) {
 
 export default function WhyPartnerWithUs() {
   return (
-    <section className="w-full bg-[#F7FAFC]">
+    <section className="w-full">
       <div
         className="
           mx-auto w-full
@@ -282,9 +282,9 @@ export default function WhyPartnerWithUs() {
               "
             >
               Reliable{" "}
-              <span className="text-[#FF8C2C]">Pharmaceutical Sourcing</span>
+              <span className="text-[#FF9436]">Pharmaceutical Sourcing</span>
               <br className="hidden md:block" /> Starts With the{" "}
-              <span className="text-[#FF8C2C]">Right Partner.</span>
+              <span className="text-[#FF9436]">Right Partner.</span>
             </h2>
           </div>
 

@@ -105,7 +105,7 @@ export default function AboutSection() {
           >
             Connecting Indian
             <br className="hidden sm:block" />
-            <span className="text-[#FF8C2C]">
+            <span className="text-[#FF9436]">
               {" "}
               Pharmaceuticals with Global
               <br className="hidden sm:block" /> Healthcare
@@ -159,12 +159,12 @@ export default function AboutSection() {
               inline-flex
               min-h-[48px]
               items-center justify-center
-              gap-[10px]
-              rounded-[10px]
-              bg-[#FF8C2C]
-              px-[18px]
-              text-[14px]
-              font-semibold
+              gap-[5px]
+              rounded-[15px]
+              bg-[#FF9436]
+              px-[12px]
+              text-[18px]
+              font-bold
               text-white
 
               shadow-[0_5px_12px_rgba(0,0,0,0.2)]
@@ -174,14 +174,14 @@ export default function AboutSection() {
               hover:bg-[#F47C17]
               hover:shadow-lg
 
-              sm:text-[15px]
+              sm:text-[18px]
               xl:min-h-[50px]
             "
           >
             Discover our Company
             <ArrowRight
-              size={18}
-              strokeWidth={2}
+              size={22}
+              strokeWidth={3}
               className="
                 transition-transform
                 group-hover:translate-x-1

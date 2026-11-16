@@ -41,9 +41,9 @@ export default function GlobalReach() {
                 xl:text-[59px]
               "
             >
-              Connecting <span className="text-[#FF8C2C]">Healthcare</span>
+              Connecting <span className="text-[#FF9436]">Healthcare</span>
               <br />
-              <span className="text-[#FF8C2C]">Markets</span> Worldwide.
+              <span className="text-[#FF9436]">Markets</span> Worldwide.
             </h2>
           </div>
 

@@ -96,16 +96,16 @@ export default function AyurvedicBrands() {
             >
               Discover Trusted Ayurvedic
               <br />
-              <span className="text-[#FF8C2C]">Brands</span>
+              <span className="text-[#FF9436]">Brands</span>
             </h2>
 
             <p
               className="
                 mt-[6px] max-w-[535px]
-                text-[13px] font-normal
+                text-[16px] font-normal
                 leading-[1.7]
-                text-[#74859B]
-                sm:text-[14px]
+                text-[#64748B]
+                sm:text-[16px]
                 xl:text-[16px]
               "
             >
@@ -125,11 +125,11 @@ export default function AyurvedicBrands() {
               rounded-[9px]
               border border-[#BFC6CD]
               bg-transparent px-[12px]
-              text-[14px] font-semibold
+              text-[15px] font-semibold
               text-[#111111]
               transition-all duration-300
               hover:border-[#FF8C2C]
-              hover:bg-[#FF8C2C]
+              hover:bg-[#FF9436]
               hover:text-white
               xl:mt-[109px]
             "

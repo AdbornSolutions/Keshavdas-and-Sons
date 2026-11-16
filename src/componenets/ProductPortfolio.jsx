@@ -110,7 +110,7 @@ export default function ProductPortfolio({
               "
             >
               Explore Our{" "}
-              <span className="text-[#FF8C2C]">
+              <span className="text-[#FF9436]">
                 Pharmaceutical
                 <br className="hidden xl:block" /> Portfolio
               </span>
