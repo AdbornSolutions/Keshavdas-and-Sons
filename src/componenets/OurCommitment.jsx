@@ -8,7 +8,7 @@ const commitments = [
     title: "Packaging & Handling Coordination",
     description:
       "Packaging and handling requirements reviewed before shipment arrangements are made.",
-    image: { Packaging },
+    image: Packaging,
     alt: "Pharmaceutical warehouse packaging and handling",
   },
   {
@@ -16,7 +16,7 @@ const commitments = [
     title: "Regulatory Requirements Review",
     description:
       "Destination-country regulations checked for each product before supply is confirmed.",
-    image: { Regulatory },
+    image: Regulatory,
     alt: "Pharmaceutical professional working in a laboratory",
   },
   {
@@ -24,7 +24,7 @@ const commitments = [
     title: "Product Information & Documentation",
     description:
       "Product details and applicable documents shared for every inquiry, aligned to the medicine and destination market.",
-    image: { Documentation },
+    image: Documentation,
     alt: "Pharmaceutical products and medical documentation",
   },
 ];

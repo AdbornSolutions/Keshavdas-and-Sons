@@ -1,6 +1,8 @@
 import AboutSection from "../componenets/AboutSection";
 import AyurvedicBrands from "../componenets/AyurvedicBrands";
 import CategoryNavbar from "../componenets/CategoryNavbar";
+import ExportInquiryCTA from "../componenets/ExportInquiryCTA";
+import FAQSection from "../componenets/FAQSection";
 import FeaturedBrands from "../componenets/FeaturedBrands";
 import GlobalReach from "../componenets/GlobalReach";
 import HealthCategories from "../componenets/HealthCategories";
@@ -27,6 +29,8 @@ const Home = () => {
         <HowWeWork />
         <OurCommitment />
         <InsightsSection />
+        <FAQSection />
+        <ExportInquiryCTA />
       </div>
     </>
   );

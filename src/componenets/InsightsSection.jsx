@@ -11,7 +11,7 @@ const insights = [
     date: "Oct 14, 2026",
     title:
       "Understanding Documentation for International Pharmaceutical Shipments",
-    image: { GlobalTrade },
+    image: GlobalTrade,
     link: "/insights/international-pharmaceutical-shipments",
   },
   {
@@ -19,7 +19,7 @@ const insights = [
     category: "Pharmaceutical Industry",
     date: "Sep 28, 2026",
     title: "How Wholesale Buyers Can Prepare a Clear Export Inquiry",
-    image: { Pharmaceutical },
+    image: Pharmaceutical,
     link: "/insights/wholesale-export-inquiry",
   },
   {
@@ -27,7 +27,7 @@ const insights = [
     category: "Product Updates",
     date: "Sep 09, 2026",
     title: "A Closer Look at Our Ophthalmic Product Range",
-    image: { Ophthalmic },
+    image: Ophthalmic,
     link: "/insights/ophthalmic-products",
   },
 ];

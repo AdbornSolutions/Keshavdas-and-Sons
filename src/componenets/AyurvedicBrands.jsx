@@ -1,5 +1,5 @@
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight } from "lucide-react";
+
 import Baidyanath from "../assets/baidyanath.png";
 import Dabur from "../assets/daburtree.png";
 import Dhootapapeshwar from "../assets/dhootapapeshwar.png";
@@ -57,40 +57,33 @@ const brands = [
 ];
 
 export default function AyurvedicBrands() {
-  const scrollRef = useRef(null);
-
-  const scrollBrands = (direction) => {
-    scrollRef.current?.scrollBy({
-      left: direction * 170,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="w-full bg-[#F7F9FC]">
       <div
         className="
-          relative mx-auto w-full
-          max-w-[1440px]
+          relative mx-auto flex h-full w-full
+          max-w-[1440px] flex-col
           px-4 py-7
           sm:px-8
           lg:px-[60px]
           xl:h-[357px]
           xl:px-[78px]
-          xl:py-0
+          xl:pt-[8px]
+          xl:pb-0
         "
       >
-        {/* Heading and description */}
+        {/* Heading and button */}
         <div
           className="
             flex flex-col
             items-start justify-between
             gap-5
-            sm:flex-row
-            xl:block
+            sm:flex-row sm:items-end
+            xl:items-start
           "
         >
-          <div className="xl:absolute xl:left-[78px] xl:top-[8px]">
+          {/* Left content */}
+          <div className="max-w-[560px]">
             <h2
               className="
                 text-[27px] font-bold
@@ -138,9 +131,7 @@ export default function AyurvedicBrands() {
               hover:border-[#FF8C2C]
               hover:bg-[#FF8C2C]
               hover:text-white
-              xl:absolute
-              xl:right-[78px]
-              xl:top-[145px]
+              xl:mt-[109px]
             "
           >
             Explore All Brands
@@ -148,55 +139,28 @@ export default function AyurvedicBrands() {
           </a>
         </div>
 
-        {/* Brand logos section */}
+        {/* Brand logos - Responsive scroll */}
         <div
           className="
-            relative mt-[30px]
-            w-full
-            xl:absolute
-            xl:top-[222px]
-            xl:left-[78px]
-            xl:mt-0
-            xl:w-[calc(100%-156px)]
+            mt-[30px] w-full
+            overflow-x-auto
+            scroll-smooth
+            pb-3
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+            xl:mt-[20px]
+            xl:overflow-visible
+            xl:pb-0
           "
         >
-          {/* Previous arrow */}
-          <button
-            type="button"
-            aria-label="Previous brands"
-            onClick={() => scrollBrands(-1)}
-            className="
-              absolute -left-2 top-1/2 z-10
-              flex h-8 w-8
-              -translate-y-1/2
-              items-center justify-center
-              rounded-full bg-white
-              text-[#173B68]
-              shadow-md
-              cursor-pointer
-              xl:hidden
-            "
-          >
-            <ChevronLeft size={18} />
-          </button>
-
-          {/* Scrollable logo row */}
           <div
-            ref={scrollRef}
             className="
-              flex w-full items-center
+              flex w-max items-center
               gap-[18px]
-              overflow-x-auto
-              scroll-smooth
-              pb-2
-              snap-x snap-mandatory
-              [scrollbar-width:none]
-              [&::-webkit-scrollbar]:hidden
-              sm:gap-[25px]
+              sm:gap-[24px]
+              xl:w-full
               xl:justify-between
               xl:gap-0
-              xl:overflow-visible
-              xl:pb-0
             "
           >
             {brands.map((brand) => (
@@ -205,7 +169,15 @@ export default function AyurvedicBrands() {
                 href={brand.link}
                 aria-label={`Explore ${brand.name}`}
                 className="
-                    h-[133px] w-[133px]
+                  group flex shrink-0
+                  h-[105px] w-[105px]
+                  items-center justify-center
+                  overflow-hidden
+                  rounded-full
+                  transition-all duration-300
+                  hover:-translate-y-[4px]
+                  sm:h-[120px] sm:w-[120px]
+                  xl:h-[133px] xl:w-[133px]
                 "
               >
                 <img
@@ -213,6 +185,7 @@ export default function AyurvedicBrands() {
                   alt={`${brand.name} logo`}
                   loading="lazy"
                   className="
+                    block h-full w-full
                     object-contain
                     transition-transform duration-300
                     group-hover:scale-105
@@ -221,26 +194,6 @@ export default function AyurvedicBrands() {
               </a>
             ))}
           </div>
-
-          {/* Next arrow */}
-          <button
-            type="button"
-            aria-label="Next brands"
-            onClick={() => scrollBrands(1)}
-            className="
-              absolute -right-2 top-1/2 z-10
-              flex h-8 w-8
-              -translate-y-1/2
-              items-center justify-center
-              rounded-full bg-white
-              text-[#173B68]
-              shadow-md
-              cursor-pointer
-              xl:hidden
-            "
-          >
-            <ChevronRight size={18} />
-          </button>
         </div>
       </div>
     </section>
