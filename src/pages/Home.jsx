@@ -1,6 +1,5 @@
 import AboutSection from "../componenets/AboutSection";
 import AyurvedicBrands from "../componenets/AyurvedicBrands";
-import CategoryNavbar from "../componenets/CategoryNavbar";
 import ExportInquiryCTA from "../componenets/ExportInquiryCTA";
 import FAQSection from "../componenets/FAQSection";
 import FeaturedBrands from "../componenets/FeaturedBrands";
@@ -16,7 +15,6 @@ import WhyPartnerWithUs from "../componenets/WhyPartnerWithUs";
 const Home = () => {
   return (
     <>
-      <CategoryNavbar />
       <div className="flex flex-col gap-[60px]">
         <HeroBanner />
         <HealthCategories />
