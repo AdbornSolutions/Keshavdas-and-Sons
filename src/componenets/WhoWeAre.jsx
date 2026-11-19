@@ -1,7 +1,7 @@
 import { useId } from "react";
 
-import ManufacturingImage from "../assets/manufacturing.png";
-import WarehouseImage from "../assets/warehouse.png";
+import ManufacturingImage from "../assets/manufacturing.webp";
+import WarehouseImage from "../assets/warehouse.webp";
 
 function DiagonalImages() {
   const id = useId().replace(/:/g, "");
