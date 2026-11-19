@@ -66,7 +66,7 @@ export default function OurCommitment() {
 
             <h2
               className="
-                text-[28px] font-semibold
+                text-[24px] font-semibold
                 leading-[1.12]
                 tracking-[-0.7px]
                 text-[#111111]

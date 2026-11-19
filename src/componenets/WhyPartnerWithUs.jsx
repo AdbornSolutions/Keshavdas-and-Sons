@@ -1,10 +1,14 @@
 import { CircleCheck } from "lucide-react";
+import Communication from "../assets/communication.webp";
+import Coordination from "../assets/coordination.webp";
+import Portfolio from "../assets/portfolio.webp";
+import Supply from "../assets/supply.webp";
 
 const services = [
   {
     id: 1,
     title: "Broad Pharmaceutical Portfolio",
-    image: "/images/partnership/portfolio.jpg",
+    image: Portfolio,
     features: [
       "Specialty medicines",
       "Eye-care products",
@@ -20,7 +24,7 @@ const services = [
   {
     id: 2,
     title: "International Supply Support",
-    image: "/images/partnership/supply.jpg",
+    image: Supply,
     features: ["Global logistics", "Customs clearance", "Timely delivery"],
     description:
       "We navigate complex international logistics to ensure your pharmaceutical supplies reach their global destinations safely and efficiently.",
@@ -32,7 +36,7 @@ const services = [
   {
     id: 3,
     title: "Wholesale-Focused Communication",
-    image: "/images/partnership/communication.jpg",
+    image: Communication,
     features: [
       "Dedicated account managers",
       "Quick response times",
@@ -48,7 +52,7 @@ const services = [
   {
     id: 4,
     title: "Requirement Coordination",
-    image: "/images/partnership/coordination.jpg",
+    image: Coordination,
     features: [
       "Regulatory compliance",
       "Document preparation",
