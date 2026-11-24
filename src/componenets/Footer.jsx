@@ -14,11 +14,14 @@ const footerLinks = [
   {
     title: "Products",
     links: [
-      { name: "Anti-Cancer Medicines", path: "/products/anti-cancer" },
-      { name: "Steroid Formulations", path: "/products/steroids" },
-      { name: "Skin Care Products", path: "/products/skin-care" },
-      { name: "Weight Loss Medicines", path: "/products/weight-loss" },
-      { name: "Eye Care Products", path: "/products/eye-care" },
+      { name: "TYPENTA 100 MG", path: "/products/typenta-100-mg" },
+      { name: "TYPENTA ER 200 MG", path: "/products/typenta-er-200-mg" },
+      { name: "TAPADAY 100 MG", path: "/products/tapaday-100-mg" },
+      { name: "TAPADAY ER 200 MG", path: "/products/tapaday-er-200-mg" },
+      { name: "ASPADOL 100 MG", path: "/products/aspadol-100-mg" },
+      { name: "ASPADOL 50 MG", path: "/products/aspadol-50-mg" },
+      { name: "ASPADOL ER 150 MG", path: "/products/aspadol-er-150-mg" },
+      { name: "ASPADOL ER 200 MG", path: "/products/aspadol-er-200-mg" },
     ],
   },
   {
@@ -63,7 +66,7 @@ export default function Footer() {
           px-5 pt-12 pb-6
           sm:px-10
           lg:px-[72px]
-          xl:h-[550px]
+          xl:min-h-[550px]
           xl:px-[94px]
           xl:pt-[36px]
           xl:pb-[30px]
