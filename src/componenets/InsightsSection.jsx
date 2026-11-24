@@ -200,19 +200,18 @@ export default function InsightsSection() {
             {/* Main heading */}
             <h2
               className="
-                max-w-[790px]
-                text-[32px] font-semibold
-                leading-[1.05]
-                tracking-[-1.3px]
-                text-[#101010]
-                sm:text-[44px]
-                lg:text-[52px]
-                xl:text-[58px]
+                text-[24px] font-semibold
+                leading-[1.12]
+                tracking-[-0.7px]
+                text-[#111111]
+                sm:text-[36px]
+                lg:text-[40px]
+                xl:text-[43px]
               "
             >
               Knowledge, News &amp;
-              <br />
-              Pharmaceutical Updates.
+              <br className="hidden sm:block" />
+              <span className="text-[#FF9436]">Pharmaceutical Updates.</span>
             </h2>
           </div>
 
@@ -259,12 +258,12 @@ export default function InsightsSection() {
         {/* Articles grid */}
         <div
           className="
-            mt-[50px] grid
+            mt-[35px] grid
             grid-cols-1 gap-[30px]
             sm:grid-cols-2
             lg:grid-cols-[2.1fr_1fr_1fr]
             lg:gap-[32px]
-            xl:mt-[78px]
+            xl:mt-[40px]
             xl:gap-[34px]
           "
         >

@@ -66,7 +66,6 @@ export default function Footer() {
           px-5 pt-12 pb-6
           sm:px-10
           lg:px-[72px]
-          xl:min-h-[550px]
           xl:px-[94px]
           xl:pt-[36px]
           xl:pb-[30px]
@@ -229,7 +228,6 @@ export default function Footer() {
               text-center
               text-[clamp(28px,9.25vw,134px)]
               font-bold
-              leading-[1]
               tracking-[-0.075em]
               text-[#999999]
             "

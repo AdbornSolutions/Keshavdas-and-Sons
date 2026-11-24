@@ -1,4 +1,4 @@
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowUpRight, Minus, Plus } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -41,29 +41,6 @@ const faqData = [
   },
 ];
 
-// Custom icon from your reference image
-function CornerIcon() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M5 19V5H19"
-        stroke="white"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-// Single FAQ accordion item
 function FAQItem({ faq, isOpen, onToggle }) {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
@@ -77,8 +54,6 @@ function FAQItem({ faq, isOpen, onToggle }) {
 
     updateHeight();
 
-    if (typeof ResizeObserver === "undefined") return;
-
     const observer = new ResizeObserver(updateHeight);
     observer.observe(contentRef.current);
 
@@ -90,9 +65,9 @@ function FAQItem({ faq, isOpen, onToggle }) {
       <h3>
         <button
           type="button"
-          id={`faq-question-${faq.id}`}
           aria-expanded={isOpen}
           aria-controls={`faq-answer-${faq.id}`}
+          id={`faq-question-${faq.id}`}
           onClick={onToggle}
           className="
             group flex w-full
@@ -102,7 +77,7 @@ function FAQItem({ faq, isOpen, onToggle }) {
             text-left
             focus-visible:outline-2
             focus-visible:outline-offset-[-2px]
-            focus-visible:outline-[#FF9436]
+            focus-visible:outline-[#FF8C2C]
             xl:min-h-[94px]
           "
         >
@@ -114,6 +89,7 @@ function FAQItem({ faq, isOpen, onToggle }) {
               leading-[1.35]
               tracking-[-0.3px]
               text-[#101010]
+              transition-colors
               sm:text-[18px]
               lg:text-[20px]
               xl:text-[21px]
@@ -122,43 +98,26 @@ function FAQItem({ faq, isOpen, onToggle }) {
             {faq.question}
           </span>
 
-          {/* Click-only FAQ icon */}
+          {/* Plus / Minus icon */}
           <span
             className={`
-              relative flex h-[36px] w-[36px]
-              shrink-0 items-center justify-center
-              rounded-full border
-              transition-all duration-300 ease-in-out
-              xl:h-[48px] xl:w-[48px]
+              flex h-[36px] w-[36px]
+              shrink-0 items-center
+              justify-center rounded-full
+              border transition-all duration-300
+              xl:h-[40px] xl:w-[40px]
               ${
                 isOpen
-                  ? "border-[#FF9436] bg-[#FF9436]"
-                  : "border-[#AEB3B7] bg-transparent"
+                  ? "border-[#FF8C2C] bg-[#FF8C2C] text-white"
+                  : "border-[#C4C9CD] bg-transparent text-[#111111]"
               }
             `}
           >
-            {/* Plus icon when closed */}
-            <Plus
-              size={20}
-              strokeWidth={2}
-              aria-hidden="true"
-              className={`
-                absolute text-[#111111]
-                transition-all duration-300 ease-in-out
-                ${isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100"}
-              `}
-            />
-
-            {/* White L-shaped icon when open */}
-            <span
-              className={`
-                absolute flex items-center justify-center
-                transition-all duration-300 ease-in-out
-                ${isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0"}
-              `}
-            >
-              <CornerIcon />
-            </span>
+            {isOpen ? (
+              <Minus size={18} strokeWidth={1.8} />
+            ) : (
+              <Plus size={18} strokeWidth={1.8} />
+            )}
           </span>
         </button>
       </h3>
@@ -198,10 +157,8 @@ function FAQItem({ faq, isOpen, onToggle }) {
   );
 }
 
-// Main FAQ section
 export default function FAQSection() {
-  // All FAQ items start closed
-  const [activeFAQ, setActiveFAQ] = useState(null);
+  const [activeFAQ, setActiveFAQ] = useState(1);
 
   const handleToggle = (id) => {
     setActiveFAQ((previous) => (previous === id ? null : id));
@@ -302,7 +259,7 @@ export default function FAQSection() {
               font-medium
               text-[#111111]
               transition-colors
-              hover:text-[#FF9436]
+              hover:text-[#FF8C2C]
               sm:text-[15px]
             "
           >
@@ -311,7 +268,8 @@ export default function FAQSection() {
               size={18}
               strokeWidth={2}
               className="
-                transition-transform duration-200
+                transition-transform
+                duration-200
                 group-hover:translate-x-1
                 group-hover:-translate-y-1
               "

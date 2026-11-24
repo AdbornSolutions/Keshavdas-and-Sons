@@ -148,7 +148,7 @@ export default function AyurvedicBrands() {
             pb-3
             [scrollbar-width:none]
             [&::-webkit-scrollbar]:hidden
-            xl:mt-[20px]
+            xl:mt-[30px]
             xl:overflow-visible
             xl:pb-0
           "
