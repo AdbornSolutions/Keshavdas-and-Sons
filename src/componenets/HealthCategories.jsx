@@ -61,14 +61,13 @@ export default function HealthCategories() {
 
   return (
     <section className="w-full bg-[#F7F9FB]">
-      <div className="relative mx-auto flex h-[165px] max-w-[1440px] items-center px-4 sm:px-8 lg:px-[80px]">
+      <div className="relative mx-auto flex h-[165px] max-w-[1440px] items-center px-4 sm:px-8 lg:min-w-[90%] lg:px-[80px]">
         {/* Previous button - mobile/tablet */}
         <button
           onClick={() => scroll(-1)}
           aria-label="Previous categories"
           className="absolute left-1 z-10 rounded-full bg-white p-1 shadow-md lg:hidden"
-        >
-        </button>
+        ></button>
 
         {/* Categories */}
         <div
@@ -81,6 +80,7 @@ export default function HealthCategories() {
             [scrollbar-width:none]
             [&::-webkit-scrollbar]:hidden
             lg:justify-center
+            xl:justify-between
           "
         >
           {categories.map((category) => {
@@ -136,8 +136,7 @@ export default function HealthCategories() {
           onClick={() => scroll(1)}
           aria-label="Next categories"
           className="absolute right-1 z-10 rounded-full bg-white p-1 shadow-md lg:hidden"
-        >
-        </button>
+        ></button>
       </div>
     </section>
   );

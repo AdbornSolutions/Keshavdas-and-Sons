@@ -553,7 +553,7 @@ export default function GlobalReach() {
     >
       <div
         className="
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-[1440px] lg:min-w-[90%]
           px-5 py-12
           sm:px-10 sm:py-16
           lg:px-[80px]

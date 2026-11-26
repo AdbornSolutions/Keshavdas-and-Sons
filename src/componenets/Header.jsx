@@ -33,7 +33,7 @@ export default function Header({
 
   return (
     <header className="relative z-50 w-full bg-white shadow-[0_1px_3px_rgba(0,0,0,0.07)]">
-      <div className="relative mx-auto flex h-[93px] w-full max-w-[1440px] items-center justify-between px-5 md:px-10 xl:px-[86px]">
+      <div className="relative mx-auto flex h-[93px] w-full max-w-[1440px] items-center justify-between px-5 md:px-10 lg:min-w-[90%] xl:px-[86px]">
 
         {/* Desktop navigation */}
         <nav

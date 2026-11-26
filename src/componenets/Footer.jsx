@@ -62,7 +62,7 @@ export default function Footer() {
       <div
         className="
           mx-auto flex w-full
-          max-w-[1440px] flex-col
+          max-w-[1440px] lg:min-w-[90%] flex-col
           px-5 pt-12 pb-6
           sm:px-10
           lg:px-[72px]

@@ -23,7 +23,7 @@ export default function OurMission() {
     >
       <div
         className="
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-[1440px] lg:min-w-[90%]
           px-5
           pb-5
           lg:pb-[7rem]

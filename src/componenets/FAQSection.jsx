@@ -169,7 +169,7 @@ export default function FAQSection() {
       <div
         className="
           mx-auto grid w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           grid-cols-1
           gap-[40px]
           px-5 py-[45px]

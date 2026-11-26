@@ -160,7 +160,7 @@ export default function BusinessPartners() {
       <div
         className="
           mx-auto w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           px-5 py-10
           sm:px-8 sm:py-12
           lg:px-[60px]

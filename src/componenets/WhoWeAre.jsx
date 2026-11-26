@@ -159,7 +159,7 @@ export default function WhoWeAre() {
       <div
         className="
           relative mx-auto w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           px-5 py-10
           sm:px-8 sm:py-12
           lg:px-[60px]
@@ -246,7 +246,7 @@ export default function WhoWeAre() {
             >
               Making <span className="text-[#FF9436]">Pharmaceutical</span>
               <br className="hidden lg:block" />
-              <span className="text-[#FF9436]">Sourcing</span> More Connected
+              <span className="text-[#FF9436]"> Sourcing</span> More Connected
             </h2>
 
             {/* First paragraph */}
@@ -263,6 +263,7 @@ export default function WhoWeAre() {
                 sm:text-[16px]
                 lg:text-[18px]
                 xl:mt-[32px]
+                xl:max-w-full
                 xl:text-[21px]
                 xl:leading-[1.28]
               "
@@ -288,6 +289,7 @@ export default function WhoWeAre() {
                 sm:text-[16px]
                 lg:text-[18px]
                 xl:mt-[28px]
+                xl:max-w-full
                 xl:text-[21px]
                 xl:leading-[1.28]
               "

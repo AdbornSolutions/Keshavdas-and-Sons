@@ -34,7 +34,7 @@ export default function OurCommitment() {
     <section id="our-commitment" className="w-full bg-[#F7FAFC]">
       <div
         className="
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-[1440px] lg:min-w-[90%]
           px-5 py-10
           sm:px-8 sm:py-12
           lg:px-[60px]

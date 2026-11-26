@@ -69,7 +69,7 @@ export default function CategoryNavbar({
       <div
         className="
           mx-auto h-full w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           overflow-x-auto
           [scrollbar-width:none]
           [&::-webkit-scrollbar]:hidden

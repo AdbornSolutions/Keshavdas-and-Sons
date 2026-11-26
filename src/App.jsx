@@ -6,6 +6,7 @@ import Footer from "./componenets/Footer";
 import Header from "./componenets/Header";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Ayurveda from "./pages/Ayurveda";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/ayurveda" element={<Ayurveda />} />
       </Routes>
       <Footer />
     </>

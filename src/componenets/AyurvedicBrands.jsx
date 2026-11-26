@@ -62,7 +62,7 @@ export default function AyurvedicBrands() {
       <div
         className="
           relative mx-auto flex h-full w-full
-          max-w-[1440px] flex-col
+          max-w-[1440px] lg:min-w-[90%] flex-col
           px-4 py-7
           sm:px-8
           lg:px-[60px]

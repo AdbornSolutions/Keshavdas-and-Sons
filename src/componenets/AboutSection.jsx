@@ -15,7 +15,7 @@ export default function AboutSection() {
       <div
         className="
           mx-auto flex w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           min-h-[752px]
           flex-col items-center
           justify-center

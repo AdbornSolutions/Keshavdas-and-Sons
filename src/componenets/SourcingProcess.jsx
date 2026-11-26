@@ -157,7 +157,7 @@ export default function SourcingProcess() {
     <section id="sourcing-process" className="w-full bg-[#F7FAFC]">
       <div
         className="
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-[1440px] lg:min-w-[90%]
           px-5
           sm:px-8
           lg:px-[75px]

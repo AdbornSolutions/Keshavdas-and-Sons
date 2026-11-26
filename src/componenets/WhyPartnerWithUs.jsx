@@ -233,7 +233,7 @@ export default function WhyPartnerWithUs() {
       <div
         className="
           mx-auto w-full
-          max-w-[1440px]
+          max-w-[1440px] lg:min-w-[90%]
           px-4 pt-10 pb-16
           sm:px-8 sm:pt-12
           lg:px-[55px]

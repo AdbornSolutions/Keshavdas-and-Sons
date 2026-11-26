@@ -1,8 +1,14 @@
 // import { ArrowUpRight, Heart } from "lucide-react";
 // import { useState } from "react";
+
 // import Omega3 from "../assets/Omega3.webp";
 // import Cofsils from "../assets/cofsils-gargle.webp";
 // import Himalaya from "../assets/himalaya-wellness.webp";
+
+// // Separate logo assets
+// import CofsilsLogo from "../assets/cofsils-logo.webp";
+// import HimalayaLogo from "../assets/himalaya-logo.webp";
+// import Omega3Logo from "../assets/omega3-logo.webp";
 
 // const products = [
 //   {
@@ -12,6 +18,7 @@
 //       "Omega-3 Fish Oil Capsules are rich in essential EPA and DHA fatty acids.",
 //     price: 20,
 //     image: Omega3,
+//     logo: Omega3Logo,
 //     category: "capsules",
 //   },
 //   {
@@ -21,6 +28,7 @@
 //       "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
 //     price: 20,
 //     image: Cofsils,
+//     logo: CofsilsLogo,
 //     category: "gargle",
 //   },
 //   {
@@ -30,6 +38,7 @@
 //       "Himalaya Tentex Royal is an Ayurvedic herbal formulation design...",
 //     price: 20,
 //     image: Himalaya,
+//     logo: HimalayaLogo,
 //     category: "herbal",
 //   },
 //   {
@@ -39,6 +48,7 @@
 //       "Himalaya Tentex Royal is an Ayurvedic herbal formulation design...",
 //     price: 20,
 //     image: Himalaya,
+//     logo: HimalayaLogo,
 //     category: "herbal",
 //   },
 //   {
@@ -48,6 +58,7 @@
 //       "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
 //     price: 20,
 //     image: Cofsils,
+//     logo: CofsilsLogo,
 //     category: "gargle",
 //   },
 //   {
@@ -57,6 +68,7 @@
 //       "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
 //     price: 20,
 //     image: Cofsils,
+//     logo: CofsilsLogo,
 //     category: "gargle",
 //   },
 // ];
@@ -77,7 +89,7 @@
 //     <section className="w-full bg-[#F7F9FC]">
 //       <div
 //         className="
-//           mx-auto w-full max-w-[1440px]
+//           mx-auto w-full max-w-[1440px] lg:min-w-[90%]
 //           px-[16px] py-[25px]
 //           sm:px-[35px]
 //           lg:px-[60px]
@@ -87,7 +99,7 @@
 //           xl:pb-0
 //         "
 //       >
-//         {/* Section header */}
+//         {/* SECTION HEADER */}
 //         <div
 //           className="
 //             mb-[28px] flex flex-col
@@ -97,7 +109,6 @@
 //             xl:items-start
 //           "
 //         >
-//           {/* Heading and description */}
 //           <div className="max-w-[550px]">
 //             <h2
 //               className="
@@ -131,7 +142,6 @@
 //             </p>
 //           </div>
 
-//           {/* View All Products */}
 //           <button
 //             type="button"
 //             onClick={onViewAll}
@@ -155,11 +165,11 @@
 //           </button>
 //         </div>
 
-//         {/* Product grid */}
+//         {/* PRODUCT GRID */}
 //         <div
 //           className="
-//             grid grid-cols-2
 //             mt-[20px]
+//             grid grid-cols-2
 //             gap-[12px]
 //             sm:grid-cols-3
 //             lg:grid-cols-4
@@ -176,7 +186,6 @@
 //                 className="
 //                   group relative
 //                   flex min-w-0 flex-col
-//                   overflow-hidden
 //                   rounded-[20px]
 //                   border border-[#B9BFC6]
 //                   bg-[#F8F9FA]
@@ -184,33 +193,67 @@
 //                   transition-all duration-300
 //                   hover:border-[#FF8C2C]
 //                   hover:shadow-lg
-//                   xl:h-[314px]
 //                 "
 //               >
-//                 {/* Product image */}
-//                 <button
-//                   type="button"
-//                   onClick={() => onProductClick(product)}
-//                   className="
-//                     w-full
-//                   "
-//                 >
-//                   <img
-//                     src={product.image}
-//                     alt={product.name}
-//                     loading="lazy"
+//                 {/* IMAGE AND LOGO AREA */}
+//                 <div className="relative mb-[28px] w-full">
+//                   {/* Separate product image box */}
+//                   <button
+//                     type="button"
+//                     onClick={() => onProductClick(product)}
+//                     aria-label={`View ${product.name}`}
 //                     className="
-//                       h-full w-full
-//                       transition-transform
-//                       duration-500
-//                       group-hover:scale-105
+//                       relative block w-full
+//                       overflow-hidden
+//                       rounded-[14px]
+//                       bg-[#EAF1F6]
+//                       text-left
 //                     "
-//                   />
-//                 </button>
+//                   >
+//                     <img
+//                       src={product.image}
+//                       alt={product.name}
+//                       loading="lazy"
+//                       className="
+//                         h-full w-full
+//                         object-cover
+//                         transition-transform duration-500
+//                         group-hover:scale-105
+//                       "
+//                     />
+//                   </button>
 
-//                 {/* Product information */}
-//                 <div className="relative flex flex-1 flex-col mt-0">
-//                   <div className="flex justify-between gap-1">
+//                   {/* Separate circular logo bottom-left */}
+//                   <div
+//                     className="
+//                       absolute bottom-[-16px] left-[2px]
+//                       z-10
+//                       flex h-[35px] w-[35px]
+//                       items-center justify-center
+//                       overflow-hidden
+//                       rounded-full
+//                       border-[2px] border-white
+//                       bg-white
+//                       shadow-[0_2px_8px_rgba(0,0,0,0.12)]
+//                       sm:h-[39px] sm:w-[39px]
+//                     "
+//                   >
+//                     <img
+//                       src={product.logo}
+//                       alt={`${product.name} brand logo`}
+//                       loading="lazy"
+//                       className="
+//                         h-[40%] w-[40%]
+//                         object-contain
+//                       "
+//                     />
+//                   </div>
+//                 </div>
+
+//                 {/* PRODUCT INFORMATION */}
+//                 <div className="relative flex min-w-0 flex-1 flex-col">
+//                   {/* Name and wishlist */}
+//                   <div className="flex items-start justify-between gap-1">
 //                     <button
 //                       type="button"
 //                       onClick={() => onProductClick(product)}
@@ -225,7 +268,6 @@
 //                       <span className="line-clamp-2">{product.name}</span>
 //                     </button>
 
-//                     {/* Wishlist */}
 //                     <button
 //                       type="button"
 //                       aria-label={
@@ -241,6 +283,7 @@
 //                         items-center justify-center
 //                         rounded-full
 //                         border border-[#BCC6D0]
+//                         bg-white
 //                         transition-colors
 //                         hover:border-[#FF8C2C]
 //                       "
@@ -257,6 +300,7 @@
 //                     </button>
 //                   </div>
 
+//                   {/* Description */}
 //                   <p
 //                     className="
 //                       mt-[7px] line-clamp-2
@@ -289,78 +333,93 @@
 //   );
 // }
 
+
+
 import { ArrowUpRight, Heart } from "lucide-react";
 import { useState } from "react";
 
-import Omega3 from "../assets/Omega3.webp";
-import Cofsils from "../assets/cofsils-gargle.webp";
-import Himalaya from "../assets/himalaya-wellness.webp";
-
-// Separate logo assets
-import CofsilsLogo from "../assets/cofsils-logo.webp";
-import HimalayaLogo from "../assets/himalaya-logo.webp";
-import Omega3Logo from "../assets/omega3-logo.webp";
+// Updated product images
+import Typenta100 from "../assets/typenta-100.webp";
+import AspadolER200Alt from "../assets/aspadol-er-200-alt.webp";
+import Tapaday100 from "../assets/tapaday-100.webp";
+import Tapaday200 from "../assets/tapaday-200.webp";
+import Aspadol100 from "../assets/aspadol-100.webp";
+import Aspadol50 from "../assets/aspadol-50.webp";
+import AspadolER150 from "../assets/aspadol-er-150.webp";
+import AspadolER200 from "../assets/aspadol-er-200.webp";
 
 const products = [
   {
     id: 1,
-    name: "Omega 3 Fish Oil Capsules",
+    name: "TYPENTA 100 MG",
     description:
-      "Omega-3 Fish Oil Capsules are rich in essential EPA and DHA fatty acids.",
-    price: 20,
-    image: Omega3,
-    logo: Omega3Logo,
-    category: "capsules",
+      "Tapentadol Hydrochloride 100 mg tablets in oral tablet form.",
+    image: Typenta100,
+    brand: "TYPENTA",
+    category: "tablets",
   },
   {
     id: 2,
-    name: "Cofsils Gargle",
+    name: "ASPADOL ER 200 MG",
     description:
-      "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
-    price: 20,
-    image: Cofsils,
-    logo: CofsilsLogo,
-    category: "gargle",
+      "Tapentadol 200 mg extended-release tablets in packaged blister form.",
+    image: AspadolER200Alt,
+    brand: "ASPADOL",
+    category: "extended-release",
   },
   {
     id: 3,
-    name: "Himalaya Wellness",
+    name: "TAPADAY 100 MG",
     description:
-      "Himalaya Tentex Royal is an Ayurvedic herbal formulation design...",
-    price: 20,
-    image: Himalaya,
-    logo: HimalayaLogo,
-    category: "herbal",
+      "Tapentadol 100 mg tablets supplied in a pharmaceutical blister pack.",
+    image: Tapaday100,
+    brand: "TAPADAY",
+    category: "tablets",
   },
   {
     id: 4,
-    name: "Himalaya Wellness",
+    name: "TAPADAY 200 MG",
     description:
-      "Himalaya Tentex Royal is an Ayurvedic herbal formulation design...",
-    price: 20,
-    image: Himalaya,
-    logo: HimalayaLogo,
-    category: "herbal",
+      "Tapentadol 200 mg tablets presented in box and blister packaging.",
+    image: Tapaday200,
+    brand: "TAPADAY",
+    category: "tablets",
   },
   {
     id: 5,
-    name: "Cofsils Gargle",
+    name: "ASPADOL 100 MG",
     description:
-      "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
-    price: 20,
-    image: Cofsils,
-    logo: CofsilsLogo,
-    category: "gargle",
+      "Tapentadol 100 mg tablets in pharmaceutical strip packaging.",
+    image: Aspadol100,
+    brand: "ASPADOL",
+    category: "tablets",
   },
   {
     id: 6,
-    name: "Cofsils Gargle",
+    name: "ASPADOL 50 MG",
     description:
-      "Cofsils Gargle is an antiseptic solution formulated to help relieve...",
-    price: 20,
-    image: Cofsils,
-    logo: CofsilsLogo,
-    category: "gargle",
+      "Tapentadol 50 mg tablets available in packaged blister strips.",
+    image: Aspadol50,
+    brand: "ASPADOL",
+    category: "tablets",
+  },
+  {
+    id: 7,
+    name: "ASPADOL ER 150 MG",
+    description:
+      "Tapentadol 150 mg extended-release tablets in blister packaging.",
+    image: AspadolER150,
+    brand: "ASPADOL",
+    category: "extended-release",
+  },
+  {
+    id: 8,
+    name: "ASPADOL ER 200 MG",
+    description:
+      "Tapentadol 200 mg extended-release tablets in box and blister packaging.",
+    image: AspadolER200,
+    brand: "ASPADOL",
+    category: "extended-release",
   },
 ];
 
@@ -372,7 +431,9 @@ export default function ProductPortfolio({
 
   const toggleWishlist = (id) => {
     setWishlist((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+      prev.includes(id)
+        ? prev.filter((item) => item !== id)
+        : [...prev, id]
     );
   };
 
@@ -381,6 +442,7 @@ export default function ProductPortfolio({
       <div
         className="
           mx-auto w-full max-w-[1440px]
+          lg:min-w-[90%]
           px-[16px] py-[25px]
           sm:px-[35px]
           lg:px-[60px]
@@ -433,6 +495,7 @@ export default function ProductPortfolio({
             </p>
           </div>
 
+          {/* VIEW ALL PRODUCTS */}
           <button
             type="button"
             onClick={onViewAll}
@@ -464,7 +527,7 @@ export default function ProductPortfolio({
             gap-[12px]
             sm:grid-cols-3
             lg:grid-cols-4
-            xl:grid-cols-6
+            {xl:grid-cols-5}
             xl:gap-[18px]
           "
         >
@@ -484,12 +547,11 @@ export default function ProductPortfolio({
                   transition-all duration-300
                   hover:border-[#FF8C2C]
                   hover:shadow-lg
-                  xl:h-[314px]
                 "
               >
-                {/* IMAGE AND LOGO AREA */}
+                {/* IMAGE AND BRAND BADGE */}
                 <div className="relative mb-[28px] w-full">
-                  {/* Separate product image box */}
+                  {/* Product image */}
                   <button
                     type="button"
                     onClick={() => onProductClick(product)}
@@ -498,24 +560,26 @@ export default function ProductPortfolio({
                       relative block w-full
                       overflow-hidden
                       rounded-[14px]
-                      bg-[#EAF1F6]
+                      bg-white
                       text-left
                     "
                   >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                      className="
-                        h-full w-full
-                        object-cover
-                        transition-transform duration-500
-                        group-hover:scale-105
-                      "
-                    />
+                    <div className="aspect-square w-full">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        loading="lazy"
+                        className="
+                          h-full w-full
+                          object-contain
+                          transition-transform duration-500
+                          group-hover:scale-105
+                        "
+                      />
+                    </div>
                   </button>
 
-                  {/* Separate circular logo bottom-left */}
+                  {/* Separate circular brand badge */}
                   <div
                     className="
                       absolute bottom-[-16px] left-[2px]
@@ -530,15 +594,15 @@ export default function ProductPortfolio({
                       sm:h-[39px] sm:w-[39px]
                     "
                   >
-                    <img
-                      src={product.logo}
-                      alt={`${product.name} brand logo`}
-                      loading="lazy"
+                    <span
                       className="
-                        h-[40%] w-[40%]
-                        object-contain
+                        text-[12px] font-bold
+                        text-[#173B68]
                       "
-                    />
+                      title={product.brand}
+                    >
+                      {product.brand.charAt(0)}
+                    </span>
                   </div>
                 </div>
 
@@ -557,9 +621,12 @@ export default function ProductPortfolio({
                         hover:text-[#FF8C2C]
                       "
                     >
-                      <span className="line-clamp-2">{product.name}</span>
+                      <span className="line-clamp-2">
+                        {product.name}
+                      </span>
                     </button>
 
+                    {/* Wishlist */}
                     <button
                       type="button"
                       aria-label={
@@ -605,15 +672,16 @@ export default function ProductPortfolio({
                     {product.description}
                   </p>
 
-                  {/* Price */}
+                  {/* Enquiry instead of unverified price */}
                   <div
                     className="
                       mt-auto pt-[7px]
-                      text-[18px] font-semibold
-                      leading-none text-[#173B68]
+                      text-[13px] font-semibold
+                      leading-[1.2]
+                      text-[#173B68]
                     "
                   >
-                    $ {product.price}
+                    Enquire for Price
                   </div>
                 </div>
               </article>

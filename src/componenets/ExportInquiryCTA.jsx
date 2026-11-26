@@ -12,7 +12,7 @@ export default function ExportInquiryCTA() {
     >
       <div
         className="
-          mx-auto grid w-full max-w-[1440px]
+          mx-auto grid w-full max-w-[1440px] lg:min-w-[90%]
           grid-cols-1 items-center
           gap-12 px-5 py-14
           sm:px-10 sm:py-16

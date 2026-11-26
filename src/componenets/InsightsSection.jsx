@@ -151,7 +151,7 @@ export default function InsightsSection() {
     <section id="insights" className="w-full bg-[#F7FAFC]">
       <div
         className="
-          mx-auto w-full max-w-[1440px]
+          mx-auto w-full max-w-[1440px] lg:min-w-[90%]
           px-5 py-[45px]
           sm:px-8 sm:py-[60px]
           lg:px-[60px]
