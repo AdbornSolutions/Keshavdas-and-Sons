@@ -1,4 +1,3 @@
-
 import AyurvedaHerbs from "../assets/ayurveda-herbs.webp";
 import AyurvedaProducts from "../assets/ayurveda-products.webp";
 
@@ -12,14 +11,12 @@ const features = [
   {
     number: "02",
     title: "Diverse Product Formulations",
-    description:
-      "Powders, tablets, oils, syrups and traditional preparations.",
+    description: "Powders, tablets, oils, syrups and traditional preparations.",
   },
   {
     number: "03",
     title: "International Product Discovery",
-    description:
-      "A structured catalogue for overseas healthcare businesses.",
+    description: "A structured catalogue for overseas healthcare businesses.",
   },
 ];
 
@@ -27,23 +24,22 @@ export default function AyurvedaWisdom() {
   return (
     <section
       id="ayurveda-wisdom"
-      className="w-full overflow-hidden bg-[#F7F9FC]"
+      className="w-full overflow-hidden bg-[#FFFFFF]"
     >
       <div
         className="
           mx-auto grid w-full max-w-[1440px]
           grid-cols-1 items-center
           gap-10
-          px-5 py-12
+          px-5 py-[45px]
           sm:px-8
           md:grid-cols-[43%_minmax(0,1fr)]
           md:gap-8
           lg:px-[65px]
-          xl:h-[640px]
+          xl:h-[700px]
           xl:grid-cols-[550px_minmax(0,1fr)]
           xl:gap-[55px]
-          xl:px-[107px]
-          xl:py-0
+          xl:px-[78px]
           lg:min-w-[90%]
         "
       >
@@ -53,7 +49,7 @@ export default function AyurvedaWisdom() {
             relative mx-auto w-full
             max-w-[550px]
             md:mx-0
-            xl:h-[630px]
+            xl:h-[640px]
           "
         >
           {/* Main Ayurveda image */}
@@ -125,7 +121,7 @@ export default function AyurvedaWisdom() {
               bg-white
               shadow-[0_7px_20px_rgba(0,0,0,0.13)]
               sm:w-[50%]
-              md:bottom-[-12px]
+              md:bottom-[-86px]
               xl:bottom-[-5px]
               xl:left-[197px]
               xl:right-auto
@@ -212,9 +208,8 @@ export default function AyurvedaWisdom() {
               xl:text-[17px]
             "
           >
-            Ayurveda is a traditional system of health
-            knowledge originating in India, with a long
-            history of using herbs, botanical ingredients,
+            Ayurveda is a traditional system of health knowledge originating in
+            India, with a long history of using herbs, botanical ingredients,
             and specialized formulations.
           </p>
 
@@ -232,9 +227,8 @@ export default function AyurvedaWisdom() {
               xl:text-[16px]
             "
           >
-            Today, Ayurvedic products are available in
-            multiple forms, including herbal powders,
-            tablets, capsules, oils, syrups, and traditional
+            Today, Ayurvedic products are available in multiple forms, including
+            herbal powders, tablets, capsules, oils, syrups, and traditional
             preparations.
           </p>
 
